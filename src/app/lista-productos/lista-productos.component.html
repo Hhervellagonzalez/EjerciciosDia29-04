@@ -1,0 +1,24 @@
+<h1>Empleados desde el back</h1>
+<table>
+  <caption>
+    Lista de empleados
+  </caption>
+  <tr>
+    <th>idProducto</th>
+    <th>nombre</th>
+    <th>Cantidad</th>
+    <th>precioUnitario</th>
+  </tr>
+  @for(elemento of productos;track elemento.idProducto){
+  <tr>
+    <td>{{ elemento.idProducto }}</td>
+    <td>{{ elemento.nombreProducto }}</td>
+    <td>{{ elemento.cantidad }}</td>
+    <td>{{ elemento.precioUnitario }}</td>
+    <button type="button" [routerLink]="['/modificar', elemento.idProducto]">Modificar</button>
+    <td><button type="button" (click)="eliminar(elemento.idProducto)">Eliminar</button></td>
+  </tr>
+  }
+</table>
+<button routerLink="alta">Alta de un nuevo producto</button>
+<router-outlet></router-outlet>

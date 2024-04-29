@@ -1,0 +1,40 @@
+
+<h1>Modificar Producto</h1>
+
+<div>
+    <form [formGroup]="form" (ngSubmit)="modificarProducto()">
+        <label>Id Producto</label>
+        <input placeholder="Id del Producto" formControlName="idProducto">
+
+        <label>Nombre del Producto</label>
+        <input placeholder="Nombre" required formControlName="nombreProducto">
+        
+        <label>Cantidad</label>
+        <input placeholder="Cantidad" required formControlName="cantidad">
+        
+        <label>Precio Unitario</label>
+        <input placeholder="Precio Unitario" required formControlName="precioUnitario">
+
+        <label>id_supplier</label>
+        <input placeholder="id_supplier" required formControlName="id_supplier">
+
+        <label>id_categoria</label>
+        <input placeholder="id_categoria" required formControlName="id_categoria">
+
+        <label>unidadesStock</label>
+        <input placeholder="unidadesStock" required formControlName="unidadesStock">
+
+        <label>enPedido</label>
+        <input placeholder="enPedido" required formControlName="enPedido">
+        
+        <label>volverAPedir</label>
+        <input placeholder="volverAPedir" required formControlName="volverAPedir">
+
+        <label>discontinua</label>
+        <input placeholder="discontinua" required formControlName="discontinua">
+        
+        <button type="submit" [disabled]="form.invalid">Aceptar</button>
+        <button type="button" routerLink="/">Cancelar</button>
+
+    </form>
+</div>
